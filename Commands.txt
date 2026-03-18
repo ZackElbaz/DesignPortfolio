@@ -1,0 +1,6 @@
+npm run dev        # run locally (build/test)
+# make changes in code
+git add .
+git commit -m "first launch"
+git push           
+# deploy

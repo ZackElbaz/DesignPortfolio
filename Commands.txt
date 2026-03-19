@@ -1,6 +1,6 @@
 npm run dev        # run locally (build/test)
 # make changes in code
 git add .
-git commit -m "contact page and page refinements"
+git commit -m "touch and hold functionality"
 git push           
 # deploy

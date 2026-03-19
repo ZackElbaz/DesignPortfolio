@@ -14,13 +14,13 @@ export default function Header() {
           to="/portfolio"
           className={location.pathname === '/' || location.pathname === '/portfolio' ? 'active' : ''}
         >
-          portfolio
+          PORTFOLIO
         </Link>
         <Link
           to="/contact"
           className={location.pathname === '/contact' ? 'active' : ''}
         >
-          contact
+          CONTACT
         </Link>
       </nav>
     </header>

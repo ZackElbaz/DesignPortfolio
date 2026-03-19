@@ -15,7 +15,6 @@ export default function ProjectTemplate({
       <main className="project-main">
         <article className="project-article">
           <h1 className="project-title">{title}</h1>
-          <p className="project-date">{date}</p>
 
           <section className="project-section">
             <h2 className="project-subtitle">The problem:</h2>

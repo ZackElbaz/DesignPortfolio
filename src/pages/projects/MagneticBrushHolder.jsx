@@ -7,7 +7,7 @@ import img2 from '../../assets/projects/MagneticBrushHolder/Zack Profile Pic.jpg
 const project = {
   slug: 'magnetic-brush-holder',
   title: 'Magnetic Brush Holder',
-  date: '2026-03-18',
+  date: '2026-01-19',
   problem:
     'Climbers often want a brush to stay easily accessible on a chalk bag without swinging awkwardly, snagging, or being difficult to remove and reattach during use.',
   coverImage: cover,

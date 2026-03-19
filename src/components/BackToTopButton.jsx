@@ -9,16 +9,18 @@ export default function BackToTopButton() {
       const windowHeight = window.innerHeight
       const docHeight = document.documentElement.scrollHeight
 
-      if (scrollY + windowHeight > docHeight * 0.75) {
-        setVisible(true)
-      } else {
-        setVisible(false)
-      }
+      const atBottom = scrollY + windowHeight >= docHeight - 2
+      setVisible(atBottom)
     }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   const handleClick = () => {
@@ -33,8 +35,12 @@ export default function BackToTopButton() {
       className={`back-to-top ${visible ? 'visible' : ''}`}
       onClick={handleClick}
     >
-      <div className="arrow-up" />
-      <span className="back-to-top-text">back to top</span>
+      <img
+        src="/ScrollToTopArrow.svg"
+        alt="Scroll to top"
+        className="back-to-top-arrow"
+      />
+      <span className="back-to-top-text">SCROLL TO TOP</span>
     </button>
   )
 }

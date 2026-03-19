@@ -8,7 +8,7 @@ import vid1 from '../../assets/projects/FlightGlobe/Recording 2025-12-09 212127.
 const project = {
   slug: 'flight-globe',
   title: 'Flight Globe',
-  date: '2026-03-18',
+  date: '2026-02-17',
   problem:
     'Climbers often want a brush to stay easily accessible on a chalk bag without swinging awkwardly, snagging, or being difficult to remove and reattach during use.',
   coverImage: cover,

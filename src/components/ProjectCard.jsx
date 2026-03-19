@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({
+  project,
+  isTouchActive,
+  setActiveTouchSlug,
+}) {
   const slides =
     project.hoverSlides && project.hoverSlides.length > 0
       ? project.hoverSlides
@@ -10,8 +14,10 @@ export default function ProjectCard({ project }) {
   const [isHovered, setIsHovered] = useState(false)
   const [slideIndex, setSlideIndex] = useState(0)
 
+  const isActive = isHovered || isTouchActive
+
   useEffect(() => {
-    if (!isHovered || slides.length <= 1) {
+    if (!isActive || slides.length <= 1) {
       setSlideIndex(0)
       return
     }
@@ -24,28 +30,38 @@ export default function ProjectCard({ project }) {
       interval = setInterval(() => {
         setSlideIndex((prev) => (prev + 1) % slides.length)
       }, 1800)
-    }, 350)
+    }, 300)
 
     return () => {
       clearTimeout(firstTimeout)
       clearInterval(interval)
     }
-  }, [isHovered, slides.length])
+  }, [isActive, slides.length])
+
+  const handlePointerDown = (event) => {
+    if (event.pointerType === 'touch') {
+      event.preventDefault()
+      setActiveTouchSlug(project.slug)
+    }
+  }
 
   return (
     <Link
       to={`/project/${project.slug}`}
-      className="project-card"
+      className={`project-card ${isActive ? 'active' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onPointerDown={handlePointerDown}
+      onContextMenu={(event) => event.preventDefault()}
     >
       <img
         src={slides[slideIndex]}
         alt={project.title}
-        className="project-card-image"
+        className={`project-card-image ${isActive ? 'active' : ''}`}
+        draggable="false"
       />
 
-      <div className={`project-card-overlay ${isHovered ? 'visible' : ''}`}>
+      <div className={`project-card-overlay ${isActive ? 'visible active' : ''}`}>
         <span className="project-card-title">{project.title}</span>
       </div>
     </Link>

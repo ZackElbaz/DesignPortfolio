@@ -6,9 +6,6 @@ import img1 from '../../assets/projects/KneeImplantTestRig/comprehensiveknee.jpg
 
 import img2 from '../../assets/projects/KneeImplantTestRig/knee-replacement-xray.jpg'
 
-import img3 from '../../assets/projects/KneeImplantTestRig/OriginalMocapMarkers.jpg'
-import img4 from '../../assets/projects/KneeImplantTestRig/ortholoaduntouched.jpg'
-
 import img5 from '../../assets/projects/KneeImplantTestRig/OpenPoseSkeleton.jpg'
 import img6 from '../../assets/projects/KneeImplantTestRig/OpenposeMocapRepresentation.jpg'
 import img7 from '../../assets/projects/KneeImplantTestRig/2peopleopenpose.jpg'
@@ -45,14 +42,6 @@ const project = {
     {
         type: 'image',
         src: img2,
-    },
-
-    {
-        type: 'row',
-        items: [
-        { type: 'image', src: img3 },
-        { type: 'image', src: img4 },
-        ],
     },
 
     {

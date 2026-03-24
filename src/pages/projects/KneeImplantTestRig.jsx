@@ -2,8 +2,6 @@ import ProjectTemplate from './ProjectTemplate'
 
 import cover from '../../assets/projects/KneeImplantTestRig/finalcadmodel.jpg'
 
-import img1 from '../../assets/projects/KneeImplantTestRig/comprehensiveknee.jpg'
-
 import img2 from '../../assets/projects/KneeImplantTestRig/knee-replacement-xray.jpg'
 
 import img5 from '../../assets/projects/KneeImplantTestRig/OpenPoseSkeleton.jpg'
@@ -35,10 +33,6 @@ const project = {
   coverImage: cover,
   hoverSlides: [cover, img6, img12, img13],
   solutionMedia: [
-    {
-        type: 'image',
-        src: img1,
-    },
     {
         type: 'image',
         src: img2,

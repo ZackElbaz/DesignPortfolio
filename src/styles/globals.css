@@ -95,7 +95,7 @@ video {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 5px;
 }
 
 .project-card {
@@ -188,22 +188,42 @@ video {
   max-width: 70ch;
   line-height: 1.65;
   font-size: 1rem;
+  margin: 0 0 15px;
 }
 
 .project-media-stack {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 5px;
 }
 
 .media-block {
   width: 100%;
 }
 
+.media-row {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.media-row-item {
+  flex: 0 0 auto;
+  min-width: 0;
+  background: #f3f3f3;
+}
+
 .project-media {
   width: 100%;
   height: auto;
   background: #f3f3f3;
+  display: block;
+}
+
+.media-row-item .project-media {
+  width: 100%;
+  height: auto;
 }
 
 .media-caption {

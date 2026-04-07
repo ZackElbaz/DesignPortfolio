@@ -13,6 +13,8 @@ const project = {
   title: 'Magnetic Brush Holder',
   date: '2026-03-26',
   problem: [
+    'Climbing brushes are used to remove excess chalk from climbing holds, restoring friction. They are therefore a small but essential tool for climbing.',
+
     'Climbers lose brushes all the time. Most chalk bags don’t have a proper place to keep one, and the ones that do are often too tight to fit most brushes.',
 
     'People end up throwing brushes on the mat, struggling to clip them on, or stuffing them wherever they fit, and inevitably losing them.',

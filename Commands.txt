@@ -1,6 +1,6 @@
 npm run dev        # run locally (build/test)
 # make changes in code
 git add .
-git commit -m "header title unboldening"
+git commit -m "more projects"
 git push           
 # deploy

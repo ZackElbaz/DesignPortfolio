@@ -1,6 +1,6 @@
 npm run dev        # run locally (build/test)
 # make changes in code
 git add .
-git commit -m "proper routing and video autoplay"
+git commit -m "filler has been removed"
 git push           
 # deploy

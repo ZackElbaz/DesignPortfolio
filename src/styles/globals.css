@@ -102,7 +102,7 @@ video {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 5px;
 }
 
@@ -126,16 +126,12 @@ video {
 
 .project-card:hover .project-card-image {
   transform: scale(1.03);
-  filter: brightness(0.62);
+  filter: brightness(0.72);
 }
 
 .project-card-image.active {
   transform: scale(1.03) !important;
-  filter: brightness(0.62) !important;
-}
-
-.project-card.active {
-  z-index: 2;
+  filter: brightness(0.72) !important;
 }
 
 .project-card-overlay {
@@ -145,6 +141,7 @@ video {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  background: rgba(0, 0, 0, 0.22);
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
@@ -461,7 +458,7 @@ video {
   }
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -470,4 +467,4 @@ video {
     max-width: 55%;
     line-height: 1.1;
   }
-}
+} */

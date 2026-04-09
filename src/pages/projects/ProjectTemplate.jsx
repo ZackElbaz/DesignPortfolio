@@ -58,11 +58,11 @@ function MediaItem({ item }) {
       <video
         className="project-media"
         src={item.src}
-        controls={item.controls ?? true}
-        autoPlay={item.autoPlay}
-        loop={item.loop}
-        muted={item.muted}
+        autoPlay={item.autoPlay ?? true}
+        loop={item.loop ?? true}
+        muted={item.muted ?? true}
         playsInline
+        controls={item.controls ?? false}
       />
     )
   }

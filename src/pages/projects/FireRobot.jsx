@@ -48,7 +48,7 @@ const project = {
     'Reducing the level of direct human exposure in these environments is critical, as current conditions make early-stage assessment both dangerous and difficult to perform reliably.',
     ],
   coverImage: cover,
-  hoverSlides: [cover, img5, img14. img16, img18, img21],
+  hoverSlides: [cover, img5, img14, img16, img18, img21],
   solutionMedia: [
   {
     type: 'row',

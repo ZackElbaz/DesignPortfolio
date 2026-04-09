@@ -5,6 +5,7 @@ import RTKPage, { projectMeta as RTKMeta } from '../pages/projects/RTK'
 import BicycleAmbulancePage, { projectMeta as BicycleAmbulanceMeta } from '../pages/projects/BicycleAmbulance'
 import FireRobotPage, { projectMeta as FireRobotMeta } from '../pages/projects/FireRobot'
 import RaceTrackerPage, { projectMeta as RaceTrackerMeta } from '../pages/projects/RaceTracker'
+import BoeingSeatPage, { projectMeta as BoeingSeatMeta } from '../pages/projects/BoeingSeat'
 
 export const projectPages = [
   {
@@ -34,5 +35,9 @@ export const projectPages = [
   {
     ...RaceTrackerMeta,
     Component: RaceTrackerPage,
+  },
+  {
+    ...BoeingSeatMeta,
+    Component: BoeingSeatPage,
   }
 ].sort((a, b) => new Date(b.date) - new Date(a.date))
